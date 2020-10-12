@@ -90,7 +90,7 @@ int main()
 
 	//set up matrices
 	glm::mat4 camProj = glm::perspective(glm::radians(80.0f), 512.f/512.f, 0.1f, 100.0f);
-	glm::mat4 camView = glm::lookAt(glm::vec3(0, 1, 10), glm::vec3(0, 0, 0), glm::vec3(0, 1, 0));
+	glm::mat4 camView = glm::lookAt(glm::vec3(3, 1, 3), glm::vec3(0, 0, 0), glm::vec3(0, 1, 0));
 
 	glm::mat4 triModel = glm::identity<glm::mat4>();
 

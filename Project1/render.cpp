@@ -270,7 +270,7 @@ shader makeShader(const char* vertSource, const char* fragSource)
 		GLchar message[1024];
 		glGetShaderInfoLog(vert, 1024, &log_length, message);
 		printf(message);
-		assert(false);
+		//assert(false);
 	}
 	glGetShaderiv(frag, GL_COMPILE_STATUS, &successfulComp);
 	if (successfulComp != GL_TRUE)
@@ -279,7 +279,7 @@ shader makeShader(const char* vertSource, const char* fragSource)
 		GLchar message[1024];
 		glGetShaderInfoLog(frag, 1024, &log_length, message);
 		printf(message);
-		assert(false);
+		//assert(false);
 
 	}
 	

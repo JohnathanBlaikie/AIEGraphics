@@ -13,13 +13,15 @@ layout (location = 7) uniform vec3 lightDirection;
 
 void main()
 {
-	vec3 ambientColor = ambient;
+	vec3 albedoColor = texture(mainTexture, vUV).xyz;
 
-	float lambert = max (0.0f, dot(vNormal.xyz, lightDirection));
+	vec3 ambientColor = albedoColor * ambient;
+
+	float lambert = max (0.0f, dot(vNormal.xyz, -lightDirection));
 
 	vec3 diffuseColor = texture(mainTexture, vUV).xyz * lightDiffuse * lambert;
  
 	outputColor = vec4(ambientColor + diffuseColor, 1.0f);
-	outputColor = vec4(1,1,1,1);
+	//outputColor = vec4(1,1,1,1);
 	//outputColor.r = sin(time);
 }
