@@ -156,10 +156,12 @@
     <ClCompile Include="render.cpp" />
     <ClCompile Include="stb.cpp" />
     <ClCompile Include="tinyObj.cpp" />
+    <ClCompile Include="userInput.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="context.h" />
     <ClInclude Include="render.h" />
+    <ClInclude Include="userInput.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

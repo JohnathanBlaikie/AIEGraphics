@@ -108,7 +108,7 @@ int main()
 	{
 		game.tick();
 
-		//triModel = glm::rotate(triModel, glm::radians(1.0f), glm::vec3(0, 0.05f, 0));
+		triModel = glm::rotate(triModel, glm::radians(0.05f), glm::vec3(0, 0.05f, 0));
 
 		game.clear();
 
