@@ -7,7 +7,7 @@
 int main()
 {
 	context game;
-	game.init(256, 256, "This thing is busted");
+	game.init(256, 256, "Custom 3D Renderer");
 
 	//verts
 	vertex triVerts[] =
@@ -26,12 +26,6 @@ int main()
 
 	};
 
-	vertex cVerts[] =
-	{
-		{ {-0.5f,	 0.0,	 0.5,	1, } },
-		{ {	0.5f,	-0.5f,	 0.0,	1, } },
-		{ {	0.0f,	 0.5f,	 0.0,	1, } }
-	};
 	//indis
 	unsigned int triIndices[] = { 2, 0, 1 };
 	unsigned int quadIndices[] = { 3, 2, 0, 0, 1, 3 };
@@ -87,6 +81,11 @@ int main()
 
 	};
 
+	light sun2 =
+	{
+		{1,0,0},{1,1,1}
+	};
+
 
 	//set up matrices
 	glm::mat4 camProj = glm::perspective(glm::radians(80.0f), 512.f/512.f, 0.1f, 100.0f);
@@ -99,7 +98,7 @@ int main()
 	setUniform(lightShader, 2, triModel);
 	setUniform(lightShader, 3, terry, 0);
 			   
-	setUniform(lightShader, 5, {0.1f, 0.1f, 0.1f});
+	setUniform(lightShader, 5, { 0.1f, 0.1f, 0.1f });
 	setUniform(lightShader, 6, sun.color);
 	setUniform(lightShader, 7, sun.direction);
 

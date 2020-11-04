@@ -46,6 +46,8 @@ bool context::init(int width, int height, const char* title)
 
 	glDebugMessageCallback(errorCallback, 0);
 	glDebugMessageControl(GL_DONT_CARE, GL_DONT_CARE, GL_DONT_CARE, 0, 0, true);
+	
+#endif
 
 	glEnable(GL_CULL_FACE);
 	glCullFace(GL_BACK);
@@ -54,7 +56,6 @@ bool context::init(int width, int height, const char* title)
 	glEnable(GL_DEPTH_TEST);
 	glDepthFunc(GL_LEQUAL);
 
-#endif
 
 	glClearColor(0.25f, 0.25f, 0.25f, 1.0f);
 
